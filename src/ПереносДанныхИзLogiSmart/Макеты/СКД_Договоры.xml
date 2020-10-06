@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSource>
+			<name>ИсточникДанных2</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Контрагент</dataPath>
+				<field>Контрагент</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Контрагент</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>Ссылка</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата_начала_действия</dataPath>
+				<field>Дата_начала_действия</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID</dataPath>
+				<field>ID</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_Статус</dataPath>
+				<field>ID_Статус</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_Тип_Документа</dataPath>
+				<field>ID_Тип_Документа</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номер</dataPath>
+				<field>Номер</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Описание</dataPath>
+				<field>Описание</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_Контрагент</dataPath>
+				<field>ID_Контрагент</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>I d контрагент</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата_Регистрации</dataPath>
+				<field>Дата_Регистрации</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НаименованиеТипаДокумента</dataPath>
+				<field>НаименованиеТипаДокумента</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Наименование типа документа</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	dbo_Документ.Ссылка КАК Ссылка,
+	dbo_Документ.ID КАК ID,
+	dbo_Документ.ID_Контрагент КАК Контрагент,
+	dbo_Документ.ID_Статус КАК ID_Статус,
+	dbo_Документ.ID_Тип_Документа КАК ID_Тип_Документа,
+	dbo_Документ.Описание КАК Описание,
+	dbo_Документ.Дата_Регистрации КАК Дата_Регистрации,
+	dbo_Контрагент.ID КАК ID_Контрагент,
+	dbo_Документ.Номер КАК Номер,
+	dbo_Документ.Дата_начала_действия КАК Дата_начала_действия,
+	dbo_Тип_Документа.Наименование КАК НаименованиеТипаДокумента
+ИЗ
+	ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Документ КАК dbo_Документ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Тип_Документа КАК dbo_Тип_Документа
+		ПО (dbo_Документ.ID_Тип_Документа = dbo_Тип_Документа.Ссылка
+				И dbo_Тип_Документа.ID В (&amp;МассивТиповДокументов))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Контрагент КАК dbo_Контрагент
+		ПО dbo_Документ.ID_Контрагент = dbo_Контрагент.Ссылка</query>
+		</dataSet>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных2</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаВремяИзменения</dataPath>
+				<field>ДатаВремяИзменения</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Объект</dataPath>
+				<field>Объект</field>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Валюта</dataPath>
+				<field>Валюта</field>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_LS</dataPath>
+				<field>ID_LS</field>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ОбъектыLogiSmart.Объект КАК Объект,
+	ОбъектыLogiSmart.Валюта КАК Валюта,
+	ОбъектыLogiSmart.ID_LS КАК ID_LS,
+	ОбъектыLogiSmart.ДатаВремяИзменения КАК ДатаВремяИзменения
+ИЗ
+	РегистрСведений.ОбъектыLogiSmart КАК ОбъектыLogiSmart
+ГДЕ
+	ОбъектыLogiSmart.Объект ССЫЛКА Справочник.ДоговорыКонтрагентов</query>
+		</dataSet>
+		<dataSetLink>
+			<sourceDataSet>НаборДанных1</sourceDataSet>
+			<destinationDataSet>НаборДанных2</destinationDataSet>
+			<sourceExpression>ID</sourceExpression>
+			<destinationExpression>ID_LS</destinationExpression>
+		</dataSetLink>
+		<parameter>
+			<name>МассивТиповДокументов</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Массив типов документов</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>10</Digits>
+					<FractionDigits>0</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+			<useRestriction>true</useRestriction>
+			<valueListAllowed>true</valueListAllowed>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="xs:string">Основной</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ID</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ID_LS</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ID_Контрагент</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ID_Статус</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ID_Тип_Документа</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Валюта</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Дата_начала_действия</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Дата_Регистрации</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаВремяИзменения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Контрагент</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>НаименованиеТипаДокумента</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Номер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Объект</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Описание</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Ссылка</field>
+		</item>
+	</selection>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>
