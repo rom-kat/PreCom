@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_LogiSmart</dataPath>
+				<field>ID_LogiSmart</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>Ссылка</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	Номенклатура.Ссылка КАК Ссылка,
+	Номенклатура.ID_LogiSmart КАК ID_LogiSmart
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	НЕ Номенклатура.ЭтоГруппа
+{ГДЕ
+	Номенклатура.Ссылка.*}</query>
+		</dataSet>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных2</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID</dataPath>
+				<field>ID</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Наименование</dataPath>
+				<field>Наименование</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_Группы</dataPath>
+				<field>ID_Группы</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	dbo_Тип_номенклатурной_единицы.ID КАК ID,
+	dbo_Тип_номенклатурной_единицы.Наименование КАК Наименование
+ИЗ
+	ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Тип_номенклатурной_единицы КАК dbo_Тип_номенклатурной_единицы
+ГДЕ
+	НЕ dbo_Тип_номенклатурной_единицы.IsGroup
+{ГДЕ
+	dbo_Тип_номенклатурной_единицы.ID_Группы.*}</query>
+		</dataSet>
+		<dataSetLink>
+			<sourceDataSet>НаборДанных1</sourceDataSet>
+			<destinationDataSet>НаборДанных2</destinationDataSet>
+			<sourceExpression>ID_LogiSmart</sourceExpression>
+			<destinationExpression>ID</destinationExpression>
+			<required>false</required>
+		</dataSetLink>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Вариант1</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Вариант1</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ID</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ID_LogiSmart</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Наименование</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Ссылка</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<left xsi:type="dcscor:Field">ID_Группы</left>
+			<comparisonType>InListByHierarchy</comparisonType>
+			<right xsi:type="v8:ValueListType">
+				<v8:valueType/>
+				<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+			</right>
+			<userSettingID>d8c11fc5-d722-4248-9524-c95365177bcc</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<left xsi:type="dcscor:Field">Ссылка</left>
+			<comparisonType>InListByHierarchy</comparisonType>
+			<right xsi:type="v8:ValueListType">
+				<v8:valueType/>
+				<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+			</right>
+			<userSettingID>f156202e-0ae7-41ae-9fe7-8fad88de6ad5</userSettingID>
+		</item>
+	</filter>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>ID</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

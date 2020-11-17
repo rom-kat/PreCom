@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Тип</dataPath>
+				<field>Тип</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Тип</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Заказчик</dataPath>
+				<field>Заказчик</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Заказчик</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НомерРеференса</dataPath>
+				<field>НомерРеференса</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатусЗапроса</dataPath>
+				<field>СтатусЗапроса</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Статус запроса</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаЗавершенияОперационно</dataPath>
+				<field>ДатаЗавершенияОперационно</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Менеджер</dataPath>
+				<field>Менеджер</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Менеджер</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НомЕдиница</dataPath>
+				<field>НомЕдиница</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Ном единица</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сумма</dataPath>
+				<field>Сумма</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_СтатусЗапроса</dataPath>
+				<field>ID_СтатусЗапроса</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Валюта</dataPath>
+				<field>Валюта</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Валюта</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ID_НомЕдиница</dataPath>
+				<field>ID_НомЕдиница</field>
+				<appearance/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	dbo_Запрос_Клиента.НомерРеференса КАК НомерРеференса,
+	dbo_Запрос_Клиента.Дата КАК Дата,
+	dbo_Запрос_Клиента.ДатаЗавершенияОперационно КАК ДатаЗавершенияОперационно,
+	dbo_Запрос_Клиента.ID_СтатусЗапроса КАК СтатусЗапроса,
+	dbo_Запрос_Клиента.ID_Заказчик КАК Заказчик,
+	dbo_Запрос_Клиента.ID_Менеджер КАК Менеджер,
+	dbo_Контейнер_Расчет.ID_Тип КАК Тип,
+	dbo_Контейнер_Расчет.ID_НомЕдиница КАК НомЕдиница,
+	dbo_Контейнер_Расчет.ID_Валюта КАК Валюта,
+	dbo_Контейнер_Расчет.Сумма КАК Сумма
+{ВЫБРАТЬ
+	НомерРеференса,
+	Дата,
+	ДатаЗавершенияОперационно,
+	СтатусЗапроса.*,
+	Заказчик.*,
+	Менеджер.*,
+	Тип.*,
+	НомЕдиница.*,
+	Сумма}
+ИЗ
+	ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Контейнер_Расчет КАК dbo_Контейнер_Расчет
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Груз_Запрос_Клиента КАК dbo_Груз_Запрос_Клиента
+			ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Запрос_Клиента КАК dbo_Запрос_Клиента
+			ПО dbo_Груз_Запрос_Клиента.ID_Запрос = dbo_Запрос_Клиента.Ссылка
+		ПО dbo_Контейнер_Расчет.ID_Груз = dbo_Груз_Запрос_Клиента.ID_Груз
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Контейнер_Услуги_Счета КАК dbo_Контейнер_Услуги_Счета
+			ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Счет КАК dbo_Счет
+			ПО dbo_Контейнер_Услуги_Счета.ID_Счет = dbo_Счет.Ссылка
+		ПО (dbo_Контейнер_Услуги_Счета.ID_Расчет = dbo_Контейнер_Расчет.Ссылка)
+ГДЕ
+	dbo_Счет.Ссылка ЕСТЬ NULL
+	И ВЫБОР
+			КОГДА &amp;ПоДатеЗавершеноОперационно
+				ТОГДА dbo_Запрос_Клиента.ДатаЗавершенияОперационно МЕЖДУ &amp;НачалоДата И &amp;ОкончаниеДата
+			ИНАЧЕ dbo_Запрос_Клиента.Дата МЕЖДУ &amp;НачалоДата И &amp;ОкончаниеДата
+		КОНЕЦ
+{ГДЕ
+	dbo_Запрос_Клиента.ID_СтатусЗапроса.*,
+	dbo_Контейнер_Расчет.ID_НомЕдиница.*}
+
+УПОРЯДОЧИТЬ ПО
+	НомерРеференса</query>
+		</dataSet>
+		<parameter>
+			<name>ПериодОтчета</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период отчета</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+			<inputParameters/>
+		</parameter>
+		<parameter>
+			<name>НачалоДата</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начало дата</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+			<inputParameters/>
+		</parameter>
+		<parameter>
+			<name>ОкончаниеДата</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Окончание дата</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+			<inputParameters/>
+		</parameter>
+		<parameter>
+			<name>ПоДатеЗавершеноОперационно</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>По дате завершено операционно</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:boolean</Type>
+			</valueType>
+			<value xsi:type="xs:boolean">false</value>
+			<useRestriction>false</useRestriction>
+			<inputParameters/>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Невыставленные счета LS</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Менеджер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Заказчик</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>НомерРеференса</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Дата</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаЗавершенияОперационно</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>СтатусЗапроса</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Тип</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>НомЕдиница</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Валюта</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сумма</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ID_СтатусЗапроса</left>
+			<comparisonType>Equal</comparisonType>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ID_НомЕдиница</left>
+			<comparisonType>NotEqual</comparisonType>
+			<right xsi:type="dcscor:DesignTimeValue"/>
+			<userSettingID>20ae5865-3a6a-4b35-a67f-5ddfe3d1843d</userSettingID>
+		</item>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</dcscor:value>
+			<userSettingID>0a324baf-eeac-4534-bb00-ffd26f517832</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ПоДатеЗавершеноОперационно</dcscor:parameter>
+			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			<userSettingID>1576a9da-d8a1-47f3-a950-7643702760ba</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Менеджер</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Заказчик</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Дата</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection/>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Тип.ТипРасчета</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Приход</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ImportantColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Менеджер</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Заказчик</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+			<item xsi:type="StructureItemGroup">
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<outputParameters/>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

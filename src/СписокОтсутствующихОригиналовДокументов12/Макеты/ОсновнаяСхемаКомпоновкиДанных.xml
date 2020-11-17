@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЖДНакладная</dataPath>
+				<field>ЖДНакладная</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ЖДНакладная</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Коносамент</dataPath>
+				<field>Коносамент</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Коносамент</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АвиаНакладная</dataPath>
+				<field>АвиаНакладная</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Авиа накладная</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>CMR</dataPath>
+				<field>CMR</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>CMR</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТТН</dataPath>
+				<field>ТТН</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ТТН</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТН</dataPath>
+				<field>ТН</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ТН</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗаявкаНаПеревозку</dataPath>
+				<field>ЗаявкаНаПеревозку</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Заявка на перевозку</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументыЗаПростой</dataPath>
+				<field>ДокументыЗаПростой</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Документы за простой</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СчетОтПоставщикаНомер</dataPath>
+				<field>СчетОтПоставщикаНомер</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СчетОтПоставщикаДата</dataPath>
+				<field>СчетОтПоставщикаДата</field>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+					<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<DateFractions>Date</DateFractions>
+					</DateQualifiers>
+				</valueType>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПаспортНаПеревозкуНомер</dataPath>
+				<field>ПаспортНаПеревозкуНомер</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПаспортНаПеревозкуДата</dataPath>
+				<field>ПаспортНаПеревозкуДата</field>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+					<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<DateFractions>Date</DateFractions>
+					</DateQualifiers>
+				</valueType>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Поставщик</dataPath>
+				<field>Поставщик</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Поставщик</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АктОтПоставщика</dataPath>
+				<field>АктОтПоставщика</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Акт от поставщика</d5p1:content>
+					</d5p1:item>
+				</title>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ДополнительныеОтметки.Документ.Контрагент КАК Поставщик,
+	ДополнительныеОтметки.Документ КАК АктОтПоставщика,
+	ДополнительныеОтметки.СчетОтПоставщика.Номер КАК СчетОтПоставщикаНомер,
+	ДополнительныеОтметки.СчетОтПоставщика.Дата КАК СчетОтПоставщикаДата,
+	ДополнительныеОтметки.ПаспортНаПеревозку.Номер КАК ПаспортНаПеревозкуНомер,
+	ДополнительныеОтметки.ПаспортНаПеревозку.Дата КАК ПаспортНаПеревозкуДата,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.Коносамент
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК Коносамент,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.АвиаНакладная
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК АвиаНакладная,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.CMR
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК CMR,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.ЖДНакладная
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК ЖДНакладная,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.ТТН
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК ТТН,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.ТН
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК ТН,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.ДокументыЗаПростой
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК ДокументыЗаПростой,
+	ВЫБОР
+		КОГДА ДополнительныеОтметки.ЗаявкаНаПеревозку
+			ТОГДА "Отсутствует"
+		ИНАЧЕ "Получен"
+	КОНЕЦ КАК ЗаявкаНаПеревозку
+ИЗ
+	РегистрСведений.ДополнительныеОтметки КАК ДополнительныеОтметки
+ГДЕ
+	(ДополнительныеОтметки.Коносамент
+			ИЛИ ДополнительныеОтметки.АвиаНакладная
+			ИЛИ ДополнительныеОтметки.CMR
+			ИЛИ ДополнительныеОтметки.ЖДНакладная
+			ИЛИ ДополнительныеОтметки.ТТН
+			ИЛИ ДополнительныеОтметки.ТН
+			ИЛИ ДополнительныеОтметки.ДокументыЗаПростой
+			ИЛИ ДополнительныеОтметки.ЗаявкаНаПеревозку)</query>
+		</dataSet>
+		<calculatedField>
+			<dataPath>ВходящийСчёт</dataPath>
+			<expression>"Входящий счёт № "+Строка(СчетОтПоставщикаНомер) +" от "+Формат(СчетОтПоставщикаДата, "ДД") </expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Входящий счёт</d4p1:content>
+				</d4p1:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>Заказ</dataPath>
+			<expression>"Заказ № "+Строка(ПаспортНаПеревозкуНомер) +" от "+Строка(ПаспортНаПеревозкуДата )</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Заказ</d4p1:content>
+				</d4p1:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</calculatedField>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Список отсутствующих оригиналов</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Поставщик</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>АктОтПоставщика</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ВходящийСчёт</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Заказ</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>CMR</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>АвиаНакладная</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДокументыЗаПростой</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ЖДНакладная</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ЗаявкаНаПеревозку</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Коносамент</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТН</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТТН</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Поставщик</left>
+			<comparisonType>Equal</comparisonType>
+			<right xsi:type="dcscor:DesignTimeValue"/>
+			<userSettingID>be3ac4c4-77df-4702-abe7-de76b0221d09</userSettingID>
+		</item>
+	</filter>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Поставщик</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>АктОтПоставщика</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>ВходящийСчёт</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Заказ</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>CMR</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">CMR</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>АвиаНакладная</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">АвиаНакладная</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ДокументыЗаПростой</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДокументыЗаПростой</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ЖДНакладная</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ЖДНакладная</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ЗаявкаНаПеревозку</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ЗаявкаНаПеревозку</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Коносамент</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Коносамент</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ТН</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ТН</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ТТН</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ТТН</left>
+					<comparisonType>Contains</comparisonType>
+					<right xsi:type="xs:string">Отсутствует</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ВходящийСчёт</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">СчетОтПоставщикаНомер</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Заказ</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ПаспортНаПеревозкуНомер</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Текст</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Поставщик</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+		<item xsi:type="StructureItemGroup">
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

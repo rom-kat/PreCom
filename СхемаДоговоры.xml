@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSource>
+		<name>ИсточникДанных2</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата_начала_действия</dataPath>
+			<field>Дата_начала_действия</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ID</dataPath>
+			<field>ID</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ID_Статус</dataPath>
+			<field>ID_Статус</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ID_Тип_Документа</dataPath>
+			<field>ID_Тип_Документа</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ID_Контрагент</dataPath>
+			<field>ID_Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>I d контрагент</v8:content>
+				</v8:item>
+			</title>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата_Регистрации</dataPath>
+			<field>Дата_Регистрации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеТипаДокумента</dataPath>
+			<field>НаименованиеТипаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование типа документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	dbo_Документ.Ссылка КАК Ссылка,
+	dbo_Документ.ID КАК ID,
+	dbo_Документ.ID_Контрагент КАК Контрагент,
+	dbo_Документ.ID_Статус КАК ID_Статус,
+	dbo_Документ.ID_Тип_Документа КАК ID_Тип_Документа,
+	dbo_Документ.Описание КАК Описание,
+	dbo_Документ.Дата_Регистрации КАК Дата_Регистрации,
+	dbo_Контрагент.ID КАК ID_Контрагент,
+	dbo_Документ.Номер КАК Номер,
+	dbo_Документ.Дата_начала_действия КАК Дата_начала_действия,
+	dbo_Тип_Документа.Наименование КАК НаименованиеТипаДокумента
+ИЗ
+	ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Документ КАК dbo_Документ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Тип_Документа КАК dbo_Тип_Документа
+		ПО dbo_Документ.ID_Тип_Документа = dbo_Тип_Документа.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.LogiSmart.Таблица.dbo_Контрагент КАК dbo_Контрагент
+		ПО dbo_Документ.ID_Контрагент = dbo_Контрагент.Ссылка</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВремяИзменения</dataPath>
+			<field>ДатаВремяИзменения</field>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ID_LS</dataPath>
+			<field>ID_LS</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<appearance/>
+			<inputParameters/>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОбъектыLogiSmart.Объект КАК Объект,
+	ОбъектыLogiSmart.Валюта КАК Валюта,
+	ОбъектыLogiSmart.ID_LS КАК ID_LS,
+	ОбъектыLogiSmart.ДатаВремяИзменения КАК ДатаВремяИзменения
+ИЗ
+	РегистрСведений.ОбъектыLogiSmart КАК ОбъектыLogiSmart
+ГДЕ
+	ОбъектыLogiSmart.Объект ССЫЛКА Справочник.ДоговорыКонтрагентов</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>ID</sourceExpression>
+		<destinationExpression>ID_LS</destinationExpression>
+	</dataSetLink>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ID</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ID_LS</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ID_Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ID_Статус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ID_Тип_Документа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Валюта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата_начала_действия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата_Регистрации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВремяИзменения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаименованиеТипаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Объект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Описание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
